@@ -13,10 +13,7 @@ int main() {
     char* dt = ctime(&now);
 
     // 構建文件名，例如：2024-03.txt
-    // 注意：這裡只是一個示例，你可能需要根據ctime返回的日期格式進行調整
     diaryFilename = "Memorandum_" + to_string(1900 + localtime(&now)->tm_year) + "-" + to_string(1 + localtime(&now)->tm_mon) + ".txt";
-
-    // 檢查文件夾並創建（這裡省略了具體實現）
 
     ofstream diaryFile(diaryFilename, ios::app); // 打開檔案進行追加
     if (!diaryFile) {
