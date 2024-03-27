@@ -20,10 +20,6 @@ int main() {
         cerr << "Unable to open file";
         return 1; // 結束程序
     }
-    
-
-
-
 
     cout << "Enter your memo (type 'exit' to finish):" << endl;
 
