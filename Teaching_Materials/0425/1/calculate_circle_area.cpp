@@ -13,8 +13,7 @@
  * double: 圓的面積，使用公式 π * radius^2 計算，其中 π 可以使用 3.14159。
  */
 double calculate_circle_area(double radius) {
-    const double pi = 3.14159;
-    return pi * radius * radius;
+    
 }
 
 int main() {

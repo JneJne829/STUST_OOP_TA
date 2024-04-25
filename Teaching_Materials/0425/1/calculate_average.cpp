@@ -14,11 +14,7 @@
  * double: 陣列中所有數字的總和除以數字的數量得到的平均值。
  */
 double calculate_average(double numbers[], int size) {
-    double sum = 0;
-    for (int i = 0; i < size; ++i) {
-        sum += numbers[i];
-    }
-    return size == 0 ? 0 : sum / size;
+    
 }
 
 int main() {

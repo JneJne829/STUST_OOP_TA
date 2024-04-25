@@ -13,7 +13,7 @@
  * double: 華氏溫度，計算公式為 (攝氏度 * 9/5) + 32。
  */
 double celsius_to_fahrenheit(double celsius) {
-    return (celsius * 9 / 5) + 32;
+    
 }
 
 int main() {

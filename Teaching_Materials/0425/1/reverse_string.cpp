@@ -14,7 +14,7 @@
  * string: 反轉後的字符串。
  */
 std::string reverse_string(const std::string& s) {
-    return std::string(s.rbegin(), s.rend());
+    
 }
 
 int main() {

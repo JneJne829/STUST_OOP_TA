@@ -14,16 +14,7 @@
  * bool: 布爾值，表示陣列是否為回文。
  */
 bool is_palindrome(int arr[], int size) {
-    int start = 0;
-    int end = size - 1;
-    while (start < end) {
-        if (arr[start] != arr[end]) {
-            return false;
-        }
-        start++;
-        end--;
-    }
-    return true;
+    
 }
 
 int main() {
