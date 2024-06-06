@@ -8,51 +8,51 @@ private:
     double width;
 
 public:
-    // Constructor
+    // 建構子
     Rectangle(double l = 0.0, double w = 0.0) : length(l), width(w) {}
 
-    // Function to calculate area
+    // 計算面積的函數
     double area() const {
         return length * width;
     }
 
-    // Function to calculate perimeter
+    // 計算周長的函數
     double perimeter() const {
         return 2 * (length + width);
     }
 
-    // Function to check if the rectangle is a square
+    // 檢查矩形是否為正方形的函數
     bool isSquare() const {
         return length == width;
     }
 
-    // Function to calculate the diagonal of the rectangle
+    // 計算矩形對角線的函數
     double diagonal() const {
         return sqrt(length * length + width * width);
     }
 
-    // Function to scale the rectangle
+    // 縮放矩形的函數
     void scale(double factor) {
         length *= factor;
         width *= factor;
     }
 
-    // Overload the stream insertion operator
+    // 重載輸出流插入運算子
     friend ostream& operator<<(ostream& os, const Rectangle& rect) {
         os << "Length: " << rect.length << ", Width: " << rect.width;
         return os;
     }
 
-    // Overload the stream extraction operator
+    // 重載輸入流提取運算子
     friend istream& operator>>(istream& is, Rectangle& rect) {
-        cout << "Enter length: ";
+        cout << "輸入長度: ";
         is >> rect.length;
-        cout << "Enter width: ";
+        cout << "輸入寬度: ";
         is >> rect.width;
         return is;
     }
 
-    // Overload the comparison operator for area
+    // 重載面積的比較運算子
     bool operator<(const Rectangle& other) const {
         return this->area() < other.area();
     }
@@ -65,7 +65,7 @@ public:
         return this->area() == other.area();
     }
 
-    // Overload the comparison operator for length and width equality
+    // 重載長度和寬度是否相等的比較運算子
     bool operator!=(const Rectangle& other) const {
         return this->length != other.length || this->width != other.width;
     }
@@ -74,43 +74,43 @@ public:
 int main() {
     Rectangle rect1, rect2;
 
-    cout << "Enter first rectangle:\n";
+    cout << "輸入第一個矩形:\n";
     cin >> rect1;
-    cout << "Enter second rectangle:\n";
+    cout << "輸入第二個矩形:\n";
     cin >> rect2;
 
-    cout << "First Rectangle: " << rect1 << endl;
-    cout << "Second Rectangle: " << rect2 << endl;
+    cout << "第一個矩形: " << rect1 << endl;
+    cout << "第二個矩形: " << rect2 << endl;
 
-    cout << "Area of first rectangle: " << rect1.area() << endl;
-    cout << "Perimeter of first rectangle: " << rect1.perimeter() << endl;
-    cout << "Diagonal of first rectangle: " << rect1.diagonal() << endl;
+    cout << "第一個矩形的面積: " << rect1.area() << endl;
+    cout << "第一個矩形的周長: " << rect1.perimeter() << endl;
+    cout << "第一個矩形的對角線: " << rect1.diagonal() << endl;
     
-    cout << "Area of second rectangle: " << rect2.area() << endl;
-    cout << "Perimeter of second rectangle: " << rect2.perimeter() << endl;
-    cout << "Diagonal of second rectangle: " << rect2.diagonal() << endl;
+    cout << "第二個矩形的面積: " << rect2.area() << endl;
+    cout << "第二個矩形的周長: " << rect2.perimeter() << endl;
+    cout << "第二個矩形的對角線: " << rect2.diagonal() << endl;
 
     if (rect1 < rect2)
-        cout << "First rectangle is smaller than the second rectangle in area." << endl;
+        cout << "第一個矩形的面積比第二個矩形小." << endl;
     else if (rect1 > rect2)
-        cout << "First rectangle is larger than the second rectangle in area." << endl;
+        cout << "第一個矩形的面積比第二個矩形大." << endl;
     else
-        cout << "Both rectangles have the same area." << endl;
+        cout << "兩個矩形的面積相同." << endl;
 
     if (rect1.isSquare())
-        cout << "First rectangle is a square." << endl;
+        cout << "第一個矩形是正方形." << endl;
     else
-        cout << "First rectangle is not a square." << endl;
+        cout << "第一個矩形不是正方形." << endl;
 
     if (rect2.isSquare())
-        cout << "Second rectangle is a square." << endl;
+        cout << "第二個矩形是正方形." << endl;
     else
-        cout << "Second rectangle is not a square." << endl;
+        cout << "第二個矩形不是正方形." << endl;
 
-    // Scaling the first rectangle
-    cout << "Scaling the first rectangle by a factor of 2." << endl;
+    // 縮放第一個矩形
+    cout << "將第一個矩形縮放2倍." << endl;
     rect1.scale(2);
-    cout << "First Rectangle after scaling: " << rect1 << endl;
+    cout << "縮放後的第一個矩形: " << rect1 << endl;
 
     return 0;
 }
